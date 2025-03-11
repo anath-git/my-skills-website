@@ -69,3 +69,13 @@ img {
     vertical-align: middle;
 }
 
+#about p, #skills p, #projects p, #contact p {
+    font-size: 1.1rem;
+}
+
+#skills p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
