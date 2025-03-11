@@ -1,0 +1,82 @@
+:root {
+    --nord0: #2E3440;
+    --nord1: #3B4252;
+    --nord2: #434C5E;
+    --nord3: #4C566A;
+    --nord4: #D8DEE9;
+    --nord5: #E5E9F0;
+    --nord6: #ECEFF4;
+    --nord7: #8FBCBB;
+    --nord8: #88C0D0;
+    --nord9: #81A1C1;
+    --nord10: #5E81AC;
+    --text-color: var(--nord6);
+    --bg-color: var(--nord0);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--nord1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: var(--nord8);
+}
+
+p {
+    color: var(--nord5);
+}
+
+a {
+    color: var(--nord9);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--nord10);
+}
+
+.github-info {
+    margin-top: 20px;
+    background-color: var(--nord2);
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--nord5);
+}
+
+.github-info img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.github-info a {
+    color: var(--nord9);
+}
+
+.github-info a:hover {
+    color: var(--nord10);
+}
+
+.github-info p {
+    margin: 5px 0;
+}
+
