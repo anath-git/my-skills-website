@@ -6,17 +6,19 @@
 
 body {
     font-family: 'Courier New', monospace;
-    background-color: #232634; /* Bluloco Dark */
-    color: #e0e0e0;
+    background-color: #0d1117; /* GitHub Dark */
+    color: #c9d1d9;
     line-height: 1.6;
     padding: 20px;
+    text-align: left; /* Set default to left alignment */
 }
 
 header {
-    background-color: #2f3447;
+    background-color: #161b22;
     padding: 20px;
-    text-align: center;
+    text-align: left; /* Ensure header content is left-aligned */
 }
+
 
 header nav ul {
     list-style-type: none;
@@ -28,54 +30,51 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #81A1C1;
+    color: #58a6ff;
     text-decoration: none;
     font-weight: bold;
 }
 
 section {
     margin-bottom: 40px;
+    text-align: left; /* Ensure sections are left-aligned */
 }
 
 section h1, section h2 {
-    color: #88C0D0;
+    color: #58a6ff;
 }
 
-section a {
-    color: #81A1C1;
-    text-decoration: none;
+/* Style the About section to match the GitHub Stats section */
+#about {
+    color: #c9d1d9; /* Match default text color */
+    font-family: 'Courier New', monospace; /* Match default font */
+    text-align: left; /* Ensure #about content is left aligned */
+}
+
+#about h1,
+#about p {
+    text-align: left;  /* Explicitly left-align h1 and p elements */
+    color: #c9d1d9; /* inherit color from #about */
+    font-family: 'Courier New', monospace; /* inherit font from #about */
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2f3447;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-ul {
-    margin-top: 10px;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
-img {
-    margin: 5px;
-    vertical-align: middle;
-}
-
-#about p, #skills p, #projects p, #contact p {
-    font-size: 1.1rem;
+    text-align: left; /* Ensure footer is left-aligned */
+    padding: 10px;
+    background-color: #161b22;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 #skills p {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  text-align: left;
 }
 
+#projects h2, #projects h3 {
+  text-align: left;
+}
+
+#contact p {
+  text-align: left;
+}
