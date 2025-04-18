@@ -1,0 +1,294 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Set base font size for rem units */
+    font-size: 16px;
+    scroll-behavior: smooth;
+        /* Smooth scrolling for anchor links */
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0d1117; /* GitHub Dark */
+    color: #1a65b0;
+        /* Default text color */
+    line-height: 1.6;
+    padding: 0 20px 80px 20px;
+        /* Add padding left/right, add bottom padding to avoid overlap with potential footer */
+}
+
+/* Link Styling */
+a {
+    color: #1a65b0;
+        /* Same color as text */
+            text-decoration: underline;
+            /* Add underline for visibility */
+            transition: opacity 0.3s ease;
+            /* Smooth hover effect */
+}
+
+a:hover,
+a:focus {
+    opacity: 0.8;
+        /* Slightly fade on hover/focus */
+}
+
+/* Main Content Wrapper */
+main {
+    max-width: 960px;
+        /* Limit content width for readability */
+            margin: 0 auto;
+            /* Center the main content area */
+            padding-top: 20px;
+            /* Space below header */
+}
+
+
+/* Typography - Proportional Sizes */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ~40px */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+/* ~32px */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+/* ~24px */
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ~16px */
+li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ~16px */
+
+
+/* Typing SVG Area */
+.typing-svg-container {
+    text-align: center;
+        /* Center the SVG */
+    padding: 20px 0;
+    border-bottom: 2px solid orange;
+        /* Use border-bottom instead of full border */
+            margin-bottom: 20px;
+            /* Space below SVG */
+}
+
+.typing-svg-container img {
+    display: block;
+        /* Remove extra space below image */
+            margin: 0 auto;
+            /* Center if needed (text-align might suffice) */
+            max-width: 100%;
+            /* Ensure responsiveness */
+            height: auto;
+            /* Maintain aspect ratio */
+}
+
+
+/* Header & Navigation */
+header {
+    background-color: #161b22;
+        /* Slightly different background for header */
+        padding: 15px 20px;
+            border-bottom: 1px solid #30363d;
+            /* Subtle separator */
+}
+
+header nav ul {
+    list-style: none;
+        /* Remove default bullets */
+        display: flex;
+        /* Arrange items horizontally */
+        justify-content: center;
+        /* Center navigation items */
+        gap: 25px;
+        /* Space between navigation items */
+}
+
+header nav li {
+    margin-bottom: 0;
+        /* Override default li margin */
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: 1.1rem;
+        /* ~17.6px */
+            text-decoration: none;
+        /* Remove underline specifically for nav links if desired */
+}
+
+header nav a:hover,
+header nav a:focus {
+    text-decoration: underline;
+        /* Add underline on hover/focus for nav */
+            opacity: 1;
+            /* Keep full opacity for nav hover */
+}
+
+
+/* Section Base Styles */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #161b22;
+        /* Give sections a slightly different background */
+        border-radius: 8px;
+        /* Rounded corners */
+        border: 1px solid #30363d;
+        /* Subtle border */
+    }
+
+
+    /* About Section */
+    #about h1 {
+    margin-top: 0;
+        /* First heading in section, remove extra top margin */
+    }
+
+    #about strong {
+        font-weight: bold;
+    /* Color is inherited from body */
+}
+
+/* Specific styling for the detail paragraphs in the about section */
+#about .about-detail {
+    color: #c9d1d9;
+    margin: 0;
+
+    /* Off-white color (original GitHub dark text color) */
+    /* You could add other styles here if needed */
+}
+
+/* Skills Section */
+#skills h2 {
+    margin-bottom: 1.5rem;
+        /* More space after section title */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+        /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    gap: 30px;
+        /* Gap between tech stack and projects */
+    }
+
+.tech-stack,
+.project-placeholder {
+    flex: 1;
+        /* Try to take equal space */
+        min-width: 280px;
+            /* Minimum width before wrapping */
+            padding: 15px;
+        }
+
+        .tech-stack h3,
+        .project-placeholder h3 {
+            margin-top: 0;
+            /* No top margin for headings inside flex items */
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.5rem;
+        }
+
+        .tech-stack img {
+            margin: 5px 5px 5px 0;
+            /* Spacing around badges */
+            vertical-align: middle;
+            /* Align badges nicely with text */
+}
+
+.project-placeholder {
+    border: 2px dashed orange;
+        /* Keep the placeholder border */
+        background-color: #0d1117;
+            /* Slightly different background */
+            border-radius: 10px;
+}
+
+.project-placeholder p {
+    font-style: italic;
+}
+
+/* Added styling for the project list */
+.project-placeholder ul {
+    list-style: disc; /* Add back bullet points for the project list */
+    margin-left: 20px; /* Indent the list */
+    padding: 0; /* Remove default padding */
+}
+
+.project-placeholder li {
+    margin-bottom: 10px; /* Space out list items */
+}
+
+/* Contact Section */
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    /* Container for the badges */
+}
+
+#contact a {
+    display: inline-block;
+    /* Allow margin */
+    margin-right: 10px;
+    /* Space between social icons */
+    text-decoration: none;
+    /* Remove underline from image links */
+}
+
+#contact img {
+    vertical-align: middle;
+        /* Align icons */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+        /* Center footer text */
+        padding: 20px;
+    margin-top: 40px;
+        /* Space above footer */
+        background-color: #161b22;
+            /* Match header background */
+        border-top: 1px solid #30363d;
+        /* Match header border */
+        font-size: 0.9rem;
+        /* ~14.4px - Slightly smaller text */
+}
+
+footer p {
+    margin-bottom: 0;
+        /* Remove default paragraph margin */
+}
+
+footer a {
+    /* Color and text-decoration inherited, hover effect from global 'a' */
+    font-weight: bold;
+}
