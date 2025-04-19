@@ -117,12 +117,14 @@ img {
 /* Typing SVG specific styles within header */
 .site-header .typing-svg-container {
     margin-bottom: 1rem; /* Space below SVG */
+    
 }
 
 .site-header .typing-svg-container img {
     display: block;
     margin: 0 auto; /* Center the SVG */
     max-width: 90%; /* Prevent SVG from touching edges on smaller screens */
+    
 }
 
 .site-header nav ul {
