@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,102 +7,132 @@
     <meta name="description" content="Apurba Nath's professional website showcasing skills, tech stack, and GitHub contributions">
     <title>Apurba Nath - Financial Software Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link Google Fonts from Example -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
-
 <body>
 
-    <div class="typing-svg-container">
-        <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I'm+Apurba+Nath!+Welcome!&font=Fira+Code&size=28&pause=250&width=600&height=50&color=1589F0"
-            alt="Typing SVG" />
-        <!-- Note: The color in the SVG URL (?color=1589F0) defines the SVG's text color itself, overriding CSS -->
-    </div>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <!-- Removed #projects link as there's no corresponding section ID -->
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <!-- Typing SVG moved here for better flow, similar to example's subtitle -->
+            <div class="typing-svg-container">
+                <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+I'm+Apurba+Nath!+Welcome!&font=Fira+Code&size=28&pause=250&width=600&height=50&color=FFFFFF"
+                    alt="Typing SVG - Hello, I'm Apurba Nath! Welcome!" />
+                <!-- Changed SVG color to FFFFFF (white) to fit header background -->
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    </nav>
+        </div>
     </header>
 
     <main>
-        <section id="about">
-            <h1>Apurba Nath</h1>
-            <p><strong>Financial Software Engineer | Front Office Production Support</strong></p>
-            <!-- Added class="about-detail" to these specific paragraphs -->
-            <p class="about-detail">👨 Financial industry software engineer resolving production issues for traders and exchanges.
-            </p>
-            <p class="about-detail">📈 Passionate about ensuring the stability and performance of critical trading systems.</p>
-            <p class="about-detail">📜 Computer Science graduate from Montclair State University, New Jersey.</p>
-            <p class="about-detail">🤖 Sharing my insights in artificial intelligence and automation.</p>
-            <p class="about-detail">🏛️ Exploring technologies to enhance financial production support.</p>
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="container">
+                <!-- H1 can be used here as the main page title, or within the header -->
+                <h1>Apurba Nath</h1>
+                <p><strong>Financial Software Engineer | Front Office Production Support</strong></p>
+                <!-- Kept class="about-detail" for potential specific styling -->
+                <p class="about-detail">👨 Dedicated software engineer ensuring the operational integrity and reliability of live
+                    trading environments used by traders.</p>
+                <p class="about-detail">📈 Passionate about ensuring the stability and performance of critical trading systems.</p>
+                <p class="about-detail">🧠 Investigating how AI and machine learning can predict system issues before they impact
+                    trading.</p>
+                <p class="about-detail">💡 Passionate about leveraging modern tech stacks to build robust and scalable financial
+                    solutions.</p>
+                <p class="about-detail">🤖 Sharing my insights in artificial intelligence and automation.</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills & Tools</h2>
-            <div class="skills-container">
-                <div class="tech-stack">
-                    <h3>💻 Tech Stack</h3>
-                    <p>
-                        <img src="https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54" alt="Python">
-                        <img src="https://img.shields.io/badge/perl-%2339457E.svg?style=plastic&logo=perl&logoColor=white" alt="Perl">
-                        <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=plastic&logo=powershell&logoColor=white"
-                            alt="PowerShell">
-                        <img src="https://img.shields.io/badge/bash_script-%23121011.svg?style=plastic&logo=gnu-bash&logoColor=white"
-                            alt="Bash Script"><br />
-                        <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white" alt="MySQL">
-                        <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=plastic&logo=postgresql&logoColor=white"
-                            alt="Postgres">
-                        <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white"
-                            alt="Microsoft SQL Server"><br />
-                        <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white" alt="Docker">
-                        <img src="https://img.shields.io/badge/Linux%20Terminal-%234D4D4D.svg?style=plastic&logo=linux-terminal&logoColor=white"
-                            alt="Linux Terminal">
-                        <img src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=plastic&logo=windows-terminal&logoColor=white"
-                            alt="Windows Terminal"><br />
-                        <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white" alt="NumPy">
-                        <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white" alt="Pandas">
-                        <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=plastic&logo=PyTorch&logoColor=white"
-                            alt="PyTorch"><br />
-                        <!-- Removed duplicate docker badge -->
-                        <img src="https://img.shields.io/badge/splunk-%23000000.svg?style=plastic&logo=splunk&logoColor=white"
-                            alt="Splunk"><br />
-                        <img src="https://img.shields.io/badge/FIX%20Protocol-%232D86FF.svg?style=plastic&logo=finance&logoColor=white"
-                            alt="FIX Protocol"><br />
-                        </p>
-                        </div>
-                        <div class="project-placeholder">
-                    <h3>Projects</h3>
-                    <!-- Replaced placeholder text with project links -->
-                    <ul>
-                        <li><a href="https://anath-git.github.io/Data-Transformation/" target="_blank" rel="noopener noreferrer">Bash-mysql-project</a></li>
-                        <li><a href="https://anath-git.github.io/Workflow-Automation/" target="_blank" rel="noopener noreferrer">Workflow-Automation</a></li>
-                        <li><a href="https://anath-git.github.io/FIX-Automation/" target="_blank" rel="noopener noreferrer">FIX-Automation</a></li>
-                        <li><a href="https://anath-git.github.io/area-of-interest/" target="_blank" rel="noopener noreferrer">area-of-interest</a></li>
-                    </ul>
+        <!-- Skills Section -->
+        <section id="skills" class="content-section alt-bg">
+            <div class="container">
+                <h2>Skills & Tools</h2>
+                <div class="skills-container">
+                    <div class="tech-stack">
+                        <h3>💻 Tech Stack</h3>
+                        <!-- Badges remain exactly as you had them -->
+                        <div class="badges-wrapper"> <!-- Added a wrapper for better badge layout control -->
+                            <img src="https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54" alt="Python">
+                            <img src="https://img.shields.io/badge/perl-%2339457E.svg?style=plastic&logo=perl&logoColor=white" alt="Perl">
+                            <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=plastic&logo=powershell&logoColor=white"
+                                alt="PowerShell">
+                            <img src="https://img.shields.io/badge/bash_script-%23121011.svg?style=plastic&logo=gnu-bash&logoColor=white"
+                                alt="Bash Script">
+                            <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white" alt="MySQL">
+                            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=plastic&logo=postgresql&logoColor=white"
+                                alt="Postgres">
+                            <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=plastic&logo=microsoft%20sql%20server&logoColor=white"
+                                alt="Microsoft SQL Server">
+                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white" alt="Docker">
+                            <img src="https://img.shields.io/badge/Linux%20Terminal-%234D4D4D.svg?style=plastic&logo=linux-terminal&logoColor=white"
+                                alt="Linux Terminal">
+                            <img src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=plastic&logo=windows-terminal&logoColor=white"
+                                alt="Windows Terminal">
+                            <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white" alt="NumPy">
+                            <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white" alt="Pandas">
+                            <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=plastic&logo=PyTorch&logoColor=white" alt="PyTorch">
+                            <img src="https://img.shields.io/badge/splunk-%23000000.svg?style=plastic&logo=splunk&logoColor=white" alt="Splunk">
+                            <img src="https://img.shields.io/badge/FIX%20Protocol-%232D86FF.svg?style=plastic&logo=finance&logoColor=white"
+                                alt="FIX Protocol">
+                            <img src="https://img.shields.io/badge/Market%20Data-%232D860.svg?style=plastic&logo=finance&logoColor=white"
+                                alt="market Data">
+                            <img src="https://img.shields.io/badge/OMS%20/%20EMS-CC2927.svg?style=plastic&logo=finance&logoColor=white"
+                                alt="OMS / EMS">
+                            </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <h3>Projects</h3>
+                        <!-- Project list exactly as you had it -->
+                        <ul class="project-list"> <!-- Added class for clarity -->
+                            <li><strong><a href="https://anath-git.github.io/Data-Transformation/" target="_blank"
+                                        rel="noopener noreferrer">Bash-mysql-project</a></strong></li>
+                            <li><strong><a href="https://anath-git.github.io/Workflow-Automation/" target="_blank"
+                                        rel="noopener noreferrer">Workflow-Automation</a></strong></li>
+                            <li><strong><a href="https://anath-git.github.io/FIX-Automation/" target="_blank"
+                                        rel="noopener noreferrer">FIX-Automation</a></strong></li>
+                            <li><strong><a href="https://anath-git.github.io/area-of-interest/" target="_blank"
+                                        rel="noopener noreferrer">area-of-interest</a></strong></li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
-                </section>
+            </div>
+            </section>
 
-        <section id="contact">
-            <h2>🌐 Socials & Contact</h2>
-            <p>
-                <a href="https://www.linkedin.com/in/apurba-nath-90b49945/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn Profile">
-                </a>
-                <a href="mailto:apurba.nath@gmail.com">
-                    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email Apurba Nath">
-                </a>
-                </p>
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>🌐 Socials & Contact</h2>
+                <div class="contact-links"> <!-- Added a wrapper div -->
+                    <a href="https://www.linkedin.com/in/apurba-nath-90b49945/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white"
+                            alt="LinkedIn Profile">
+                    </a>
+                    <a href="mailto:apurba.nath@gmail.com">
+                        <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email Apurba Nath">
+                    </a>
+                </div>
+                </div>
                 </section>
     </main>
 
-    <footer>
-        <p>Built by <a href="https://github.com/anath-git" target="_blank" rel="noopener noreferrer">Apurba Nath</a> | View on
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Footer content exactly as you had it -->
+            <p>Built by <a href="https://github.com/anath-git" target="_blank" rel="noopener noreferrer">Apurba Nath</a> |
+                View on
             <a href="https://github.com/anath-git" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
     </footer>
 
 </body>

@@ -1,294 +1,328 @@
-/* Global Reset & Base Styles */
-* {
+/* --- Global Resets & Base Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
-    /* Set base font size for rem units */
-    font-size: 16px;
-    scroll-behavior: smooth;
-        /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    font-size: 100%; /* Base font size (usually 16px) */
 }
 
 body {
-    font-family: 'Courier New', monospace;
-    background-color: #0d1117; /* GitHub Dark */
-    color: #1a65b0;
-        /* Default text color */
+    font-family: 'Nunito Sans', sans-serif; /* Example font */
     line-height: 1.6;
-    padding: 0 20px 80px 20px;
-        /* Add padding left/right, add bottom padding to avoid overlap with potential footer */
+    color: #333; /* Example text color */
+    background-color: #f8f9fa; /* Example background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Link Styling */
+/* --- Container --- */
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Example heading font */
+    font-weight: 500;
+    color: #2c3e50; /* Example heading color */
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* text-align: center; */ /* Optional: Center if preferred */
+    margin-top: 0; /* Remove extra space if section padding exists */
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e0e0e0; /* Example separator */
+    padding-bottom: 0.3em;
+    margin-top: 0; /* Remove extra space if section padding exists */
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    color: #34495e; /* Slightly darker H3 */
+}
+
+p {
+    margin-bottom: 1em;
+    color: #555; /* Example paragraph color */
+}
+
+/* Specific style for detail paragraphs in About section */
+#about .about-detail {
+    color: #030000; /* Keeping consistent paragraph color */
+    /* Add other styles if needed, e.g., font-style: italic; */
+    margin: 0;
+
+}
+
 a {
-    color: #1a65b0;
-        /* Same color as text */
-            text-decoration: underline;
-            /* Add underline for visibility */
-            transition: opacity 0.3s ease;
-            /* Smooth hover effect */
+    color: #3498db; /* Example link color */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 }
 
 a:hover,
 a:focus {
-    opacity: 0.8;
-        /* Slightly fade on hover/focus */
-}
-
-/* Main Content Wrapper */
-main {
-    max-width: 960px;
-        /* Limit content width for readability */
-            margin: 0 auto;
-            /* Center the main content area */
-            padding-top: 20px;
-            /* Space below header */
-}
-
-
-/* Typography - Proportional Sizes */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-/* ~40px */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-/* ~32px */
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-    margin-top: 1.5rem;
-}
-
-/* ~24px */
-p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* ~16px */
-li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-/* ~16px */
-
-
-/* Typing SVG Area */
-.typing-svg-container {
-    text-align: center;
-        /* Center the SVG */
-    padding: 20px 0;
-    border-bottom: 2px solid orange;
-        /* Use border-bottom instead of full border */
-            margin-bottom: 20px;
-            /* Space below SVG */
-}
-
-.typing-svg-container img {
-    display: block;
-        /* Remove extra space below image */
-            margin: 0 auto;
-            /* Center if needed (text-align might suffice) */
-            max-width: 100%;
-            /* Ensure responsiveness */
-            height: auto;
-            /* Maintain aspect ratio */
-}
-
-
-/* Header & Navigation */
-header {
-    background-color: #161b22;
-        /* Slightly different background for header */
-        padding: 15px 20px;
-            border-bottom: 1px solid #30363d;
-            /* Subtle separator */
-}
-
-header nav ul {
-    list-style: none;
-        /* Remove default bullets */
-        display: flex;
-        /* Arrange items horizontally */
-        justify-content: center;
-        /* Center navigation items */
-        gap: 25px;
-        /* Space between navigation items */
-}
-
-header nav li {
-    margin-bottom: 0;
-        /* Override default li margin */
-}
-
-header nav a {
-    font-weight: bold;
-    font-size: 1.1rem;
-        /* ~17.6px */
-            text-decoration: none;
-        /* Remove underline specifically for nav links if desired */
-}
-
-header nav a:hover,
-header nav a:focus {
+    color: #2980b9; /* Example link hover color */
     text-decoration: underline;
-        /* Add underline on hover/focus for nav */
-            opacity: 1;
-            /* Keep full opacity for nav hover */
 }
 
-
-/* Section Base Styles */
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #161b22;
-        /* Give sections a slightly different background */
-        border-radius: 8px;
-        /* Rounded corners */
-        border: 1px solid #30363d;
-        /* Subtle border */
-    }
-
-
-    /* About Section */
-    #about h1 {
-    margin-top: 0;
-        /* First heading in section, remove extra top margin */
-    }
-
-    #about strong {
-        font-weight: bold;
-    /* Color is inherited from body */
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-/* Specific styling for the detail paragraphs in the about section */
-#about .about-detail {
-    color: #c9d1d9;
+li {
+    margin-bottom: 0.8em;
+}
+
+strong {
+    font-weight: 700;
+    color: #34495e; /* Example emphasis color */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; /* Good default for badges */
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: #34495e; /* Example header background */
+    color: #ecf0f1; /* Example header text color */
+    padding: 1.5rem 0 1rem 0; /* Adjusted padding */
+    margin-bottom: 2rem;
+    text-align: center; /* Center header content */
+}
+
+/* Typing SVG specific styles within header */
+.site-header .typing-svg-container {
+    margin-bottom: 1rem; /* Space below SVG */
+}
+
+.site-header .typing-svg-container img {
+    display: block;
+    margin: 0 auto; /* Center the SVG */
+    max-width: 90%; /* Prevent SVG from touching edges on smaller screens */
+}
+
+.site-header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Your original gap */
+    list-style: none;
+    padding: 0;
     margin: 0;
-
-    /* Off-white color (original GitHub dark text color) */
-    /* You could add other styles here if needed */
 }
 
-/* Skills Section */
+.site-header nav li {
+     margin-bottom: 0;
+}
+
+.site-header nav a {
+    color: #ecf0f1; /* Light links in header */
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.3em 0; /* Add padding for better click area */
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- Content Sections --- */
+.content-section {
+    padding: 2.5rem 0;
+}
+
+.content-section.alt-bg {
+    background-color: #ffffff; /* Example alternate background */
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/* --- Skills Section Specifics --- */
 #skills h2 {
-    margin-bottom: 1.5rem;
-        /* More space after section title */
+     margin-bottom: 1.5rem; /* More space after Skills title */
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-        /* Allow items to wrap on smaller screens */
-    justify-content: space-between;
-    gap: 30px;
-        /* Gap between tech stack and projects */
-    }
+    gap: 30px; /* Your original gap */
+    margin-top: 1rem; /* Space below section title */
+}
 
 .tech-stack,
 .project-placeholder {
-    flex: 1;
-        /* Try to take equal space */
-        min-width: 280px;
-            /* Minimum width before wrapping */
-            padding: 15px;
-        }
-
-        .tech-stack h3,
-        .project-placeholder h3 {
-            margin-top: 0;
-            /* No top margin for headings inside flex items */
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 0.5rem;
-        }
-
-        .tech-stack img {
-            margin: 5px 5px 5px 0;
-            /* Spacing around badges */
-            vertical-align: middle;
-            /* Align badges nicely with text */
+    flex: 1; /* Try to take equal space */
+    min-width: 280px; /* Minimum width before wrapping */
+    padding: 20px;
+    background-color: #fdfdfd; /* Slightly different background for contrast */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
 }
 
-.project-placeholder {
-    border: 2px dashed orange;
-        /* Keep the placeholder border */
-        background-color: #0d1117;
-            /* Slightly different background */
-            border-radius: 10px;
+/* Adjust background for the alternate section's content */
+.alt-bg .tech-stack,
+.alt-bg .project-placeholder {
+     background-color: #f8f9fa; /* Match body background */
 }
 
-.project-placeholder p {
-    font-style: italic;
+
+.tech-stack h3,
+.project-placeholder h3 {
+    border-bottom: 1px solid #e0e0e0; /* Subtle separator */
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
-/* Added styling for the project list */
-.project-placeholder ul {
-    list-style: disc; /* Add back bullet points for the project list */
-    margin-left: 20px; /* Indent the list */
-    padding: 0; /* Remove default padding */
+/* Tech Stack Badges */
+.tech-stack .badges-wrapper {
+    line-height: 1.8; /* Space out badges vertically if they wrap */
+}
+
+.tech-stack img {
+    margin: 4px 4px 4px 0; /* Your original spacing */
+    vertical-align: middle;
+}
+
+/* Project Placeholder/List */
+.project-placeholder .project-list { /* Target the specific class */
+    list-style: disc; /* Use standard bullets */
+    margin-left: 20px; /* Indent list */
+    padding-left: 0;
 }
 
 .project-placeholder li {
-    margin-bottom: 10px; /* Space out list items */
+    margin-bottom: 0.6em; /* Adjust list item spacing */
 }
 
-/* Contact Section */
-#contact h2 {
-    margin-bottom: 1rem;
+.project-placeholder a {
+     /* Inherits global link styles, override if needed */
 }
 
-#contact p {
-    /* Container for the badges */
+
+/* --- Contact Section Specifics --- */
+.contact-links {
+    margin-top: 1rem;
+    display: flex; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 15px; /* Space between icons */
 }
 
-#contact a {
+#contact a { /* Style the link container */
     display: inline-block;
-    /* Allow margin */
-    margin-right: 10px;
-    /* Space between social icons */
-    text-decoration: none;
-    /* Remove underline from image links */
+    line-height: 1; /* Prevent extra space */
 }
 
-#contact img {
+#contact img { /* Style the badge image */
     vertical-align: middle;
-        /* Align icons */
+    transition: opacity 0.2s ease;
+}
+#contact a:hover img,
+#contact a:focus img {
+    opacity: 0.85; /* Slight fade on hover for badges */
 }
 
 
-/* Footer */
-footer {
+/* --- Footer --- */
+.site-footer {
+    background-color: #2c3e50; /* Example footer background */
+    color: #bdc3c7; /* Example footer text color */
     text-align: center;
-        /* Center footer text */
-        padding: 20px;
-    margin-top: 40px;
-        /* Space above footer */
-        background-color: #161b22;
-            /* Match header background */
-        border-top: 1px solid #30363d;
-        /* Match header border */
-        font-size: 0.9rem;
-        /* ~14.4px - Slightly smaller text */
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
 
-footer p {
-    margin-bottom: 0;
-        /* Remove default paragraph margin */
+.site-footer p {
+    margin-bottom: 0.25em;
+    color: #bdc3c7; /* Ensure footer text color */
 }
 
-footer a {
-    /* Color and text-decoration inherited, hover effect from global 'a' */
-    font-weight: bold;
+.site-footer a {
+    color: #ecf0f1; /* Lighter links in footer */
+    font-weight: bold; /* Keep bold from your original */
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- Basic Responsiveness (from example) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .site-header {
+        padding-top: 1rem;
+        padding-bottom: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    .content-section {
+        padding: 2rem 0;
+    }
+     .skills-container {
+        flex-direction: column; /* Stack skills/projects vertically */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 95%; /* Slightly smaller base font */
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+     .site-header nav ul {
+        gap: 15px; /* Reduce nav gap */
+    }
+     .site-header nav a {
+        font-size: 1rem; /* Adjust nav font size */
+    }
+    .contact-links {
+        justify-content: center; /* Center contact icons */
+    }
+    .tech-stack img {
+         margin: 3px 3px 3px 0; /* Slightly reduce badge margin */
+    }
 }
